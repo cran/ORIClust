@@ -1,6 +1,6 @@
 
 \name{ORICC2}
-\Rdversion{1.1}
+\Rdversion{1.0}
 \alias{ORICC2}
 \docType{package}
 \title{

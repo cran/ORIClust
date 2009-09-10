@@ -1,7 +1,7 @@
 
 
 \name{cyclical.min.max}
-\Rdversion{1.1}
+\Rdversion{1.0}
 \alias{cyclical.min.max}
 \docType{package}
 \title{cyclical.min.max}

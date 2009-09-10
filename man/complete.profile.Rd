@@ -2,7 +2,7 @@
 % --- Source file: complete.profile.Rd ---
 
 \name{complete.profile}
-\Rdversion{1.1}
+\Rdversion{1.0}
 \alias{complete.profile}
 \docType{package}
 \title{complete.profile}

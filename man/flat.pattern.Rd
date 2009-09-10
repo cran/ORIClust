@@ -2,7 +2,7 @@
 % --- Source file: flat.pattern.Rd ---
 
 \name{flat.pattern}
-\Rdversion{1.1}
+\Rdversion{1.0}
 \alias{flat.pattern}
 \docType{package}
 \title{flat.pattern}

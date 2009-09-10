@@ -2,7 +2,7 @@
 % --- Source file: isoincre.Rd ---
 
 \name{isoincre}
-\Rdversion{1.1}
+\Rdversion{1.0}
 \alias{isoincre}
 \docType{package}
 \title{isoincre}

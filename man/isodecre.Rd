@@ -2,7 +2,7 @@
 % --- Source file: isodecre.Rd ---
 
 \name{isodecre}
-\Rdversion{1.1}
+\Rdversion{1.0}
 \alias{isodecre}
 \docType{package}
 \title{isodecre}

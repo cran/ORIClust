@@ -2,7 +2,7 @@
 % --- Source file: decreasing.Rd ---
 
 \name{decreasing}
-\Rdversion{1.1}
+\Rdversion{1.0}
 \alias{decreasing}
 \docType{package}
 \title{decreasing}

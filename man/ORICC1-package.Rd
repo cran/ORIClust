@@ -2,7 +2,7 @@
 % --- Source file: ORICC.Rd ---
 
 \name{ORICC1}
-\Rdversion{1.1}
+\Rdversion{1.0}
 \alias{ORICC1}
 \docType{package}
 \title{One-stage ORICC}

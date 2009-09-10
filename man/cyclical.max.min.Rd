@@ -2,7 +2,7 @@
 % --- Source file: cyclical.max.min.Rd ---
 
 \name{cyclical.max.min}
-\Rdversion{1.1}
+\Rdversion{1.0}
 \alias{cyclical.max.min}
 \docType{package}
 \title{cyclical.max.min}

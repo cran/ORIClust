@@ -213,13 +213,29 @@ function (data,data.col,id.col=NULL,n.rep,n.top=NULL,transform=NULL, name.profil
           bic <- bic+rf
         #  print(bic)
     }
-    suu <- uu
-    vb <- diag(var(t(suu)))
-    inn <- length(vb)
-    svb <- rev(sort(vb))
-    ino <- rev(order(vb))
 
-    if (is.null(n.top))  {n.top <- inn}    
+   suu <- uu
+   inn <- nrow(suu)
+    vb <- apply(suu,1,sd)
+    vb <- vb^2
+    if (is.null(n.top))  {
+   n.top <- inn
+   ino <- 1:inn
+
+   }    
+ if(n.top<inn){
+
+    svb <- rev(sort(vb))
+   ino <- rev(order(vb))
+
+}
+
+
+
+
+
+
+
  
     if(n.top<=inn){
         ino <- ino[1:n.top]; 
@@ -341,7 +357,7 @@ function (data,data.col,id.col=NULL,n.rep,n.top=NULL,transform=NULL, name.profil
         for (j.cluster in 1:n.profile){
              data.for.this.cluster=c()  
              for (i in 1:length(match)){       
-                  if (match[i]==j.cluster) {data.for.this.cluster <- rbind(data.for.this.cluster,c(xx[ino[i],id.col],suu[ino[i],]))}
+                  if (match[i]==j.cluster) {data.for.this.cluster <- rbind(data.for.this.cluster,c(xx[ino[i],id.col],vb[ino[i]],suu[ino[i],]))}
              }
              if(is.null(nrow(data.for.this.cluster))==FALSE){
                   data.for.this.cluster <- cbind(k.cluster,data.for.this.cluster)
@@ -356,7 +372,7 @@ function (data,data.col,id.col=NULL,n.rep,n.top=NULL,transform=NULL, name.profil
          for (j.cluster in (n.profile+1):(n.profile+n.cyclical.profile)){
               data.for.this.cluster <- c()  
               for (i in 1:length(match)){       
-                   if (match[i]==j.cluster) {data.for.this.cluster <- rbind(data.for.this.cluster,c(xx[ino[i],id.col],suu[ino[i],]))}
+                   if (match[i]==j.cluster) {data.for.this.cluster <- rbind(data.for.this.cluster,c(xx[ino[i],id.col],vb[ino[i]],suu[ino[i],]))}
               }
               if(is.null(nrow(data.for.this.cluster))==FALSE){
                    data.for.this.cluster <- cbind(k.cluster,data.for.this.cluster)
@@ -370,7 +386,7 @@ function (data,data.col,id.col=NULL,n.rep,n.top=NULL,transform=NULL, name.profil
    if(complete.profile==1){
        data.for.this.cluster=c()  
        for (i in 1:length(match)){       
-           if (match[i]==(n.profile+n.cyclical.profile+1)) {data.for.this.cluster <- rbind(data.for.this.cluster,c(xx[ino[i],id.col],suu[ino[i],]))}
+           if (match[i]==(n.profile+n.cyclical.profile+1)) {data.for.this.cluster <- rbind(data.for.this.cluster,c(xx[ino[i],id.col],vb[ino[i]],suu[ino[i],]))}
        }
        if(is.null(nrow(data.for.this.cluster))==FALSE){
            data.for.this.cluster <- cbind(k.cluster,data.for.this.cluster)
@@ -379,7 +395,7 @@ function (data,data.col,id.col=NULL,n.rep,n.top=NULL,transform=NULL, name.profil
        data.for.this.cluster1 <- rbind(data.for.this.cluster1,data.for.this.cluster) 
    }
    name1 <- paste("Time ",1:n.time,sep="")
-   colnames(data.for.this.cluster1) <- c("Cluster","id" ,name1)
+   colnames(data.for.this.cluster1) <- c("Cluster","id","Vg" ,name1)
    write.table(data.for.this.cluster1, name.output.file, sep="\t", row.names=FALSE, col.names=TRUE, quote=FALSE)  
 
       if (onefile==FALSE){  

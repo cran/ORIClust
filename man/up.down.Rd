@@ -2,7 +2,7 @@
 % --- Source file: up.down.Rd ---
 
 \name{up.down}
-\Rdversion{1.1}
+\Rdversion{1.0}
 \alias{up.down}
 \docType{package}
 \title{up.down}

@@ -1,5 +1,5 @@
 \name{Breast}
-\Rdversion{1.1}
+\Rdversion{1.0}
 \alias{Breast}
 \docType{data}
 \title{Breast cancer cell line data}
