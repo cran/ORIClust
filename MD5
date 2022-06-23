@@ -1,5 +1,5 @@
-4e5ddae359cd03e91fde64f7267e870c *DESCRIPTION
-9fdfeb11f7ddba6f3aab9aaa6b1ac5dd *NAMESPACE
+9ecd74929b00ce2ab8ce553801e74449 *DESCRIPTION
+2eef2e0229ced55307a044595d3df8b0 *NAMESPACE
 730fdc732fe8fce0b957fd9ed165030f *R/ORICC1.R
 2d5d64b1d2806fc1e885cde5121ae635 *R/ORICC2.R
 ced04b804381b18a306be4d3d5f5b675 *R/complete.profile.R
@@ -12,7 +12,7 @@ bae3db16cf6a840c1303a53196388cdb *R/decreasing.R
 e79b2d32dabc43751eee1a652c7f8b1c *R/isodecre.R
 cc255314e33ed7b955afbf7b4acfc241 *R/isoincre.R
 d989d2231d368d2bf4e092091644dcb2 *R/up.down.R
-93876dbc43ee4490b8e878e9eb390b01 *data/Breast.rda
+535a23242d5a582ce59f7649326a8f88 *data/Breast.rda
 b6e1a20e4a322b4d1f4462de3ce459bf *man/Breast.Rd
 15b6832c42a279be9101a8c09f1064ba *man/ORICC1-package.Rd
 b747e13c79fd74899f589fc7f8af962b *man/ORICC2-package.Rd
